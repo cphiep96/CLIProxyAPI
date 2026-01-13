@@ -2,10 +2,10 @@ services:
   - type: web
     name: cliproxy-api
     runtime: docker
-    repo: https://github.com/router-for-me/CLIProxyAPI
+    repo: https://github.com/cphiep96/CLIProxyAPI
     branch: main
     dockerfilePath: ./Dockerfile
-    plan: free
+    plan: starter
     region: oregon
     envVars:
       - key: PORT
@@ -26,4 +26,4 @@ services:
 #   - name: cliproxy-db
 #     databaseName: cliproxy
 #     user: cliproxy
-#     plan: free
+#     plan: starter
