@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: cliproxy-api
+    runtime: docker
+    repo: https://github.com/router-for-me/CLIProxyAPI
+    branch: main
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 8317
+      - key: TZ
+        value: Asia/Shanghai
+      # Optional: Uncomment and set these if you need them
+      # - key: MANAGEMENT_PASSWORD
+      #   generateValue: true
+      # - key: PGSTORE_DSN
+      #   fromDatabase:
+      #     name: cliproxy-db
+      #     property: connectionString
+    healthCheckPath: /
+
+# Optional: Uncomment if you need a PostgreSQL database
+# databases:
+#   - name: cliproxy-db
+#     databaseName: cliproxy
+#     user: cliproxy
+#     plan: free
