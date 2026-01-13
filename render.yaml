@@ -9,7 +9,7 @@ services:
     region: oregon
     envVars:
       - key: PORT
-        value: 8317
+        value: 10000
       - key: TZ
         value: Asia/Shanghai
       # Optional: Uncomment and set these if you need them
