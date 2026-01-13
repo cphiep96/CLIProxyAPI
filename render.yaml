@@ -5,7 +5,7 @@ services:
     repo: https://github.com/cphiep96/CLIProxyAPI
     branch: main
     dockerfilePath: ./Dockerfile
-    plan: starter
+    plan: free
     region: oregon
     envVars:
       - key: PORT
@@ -26,4 +26,4 @@ services:
 #   - name: cliproxy-db
 #     databaseName: cliproxy
 #     user: cliproxy
-#     plan: starter
+#     plan: free
