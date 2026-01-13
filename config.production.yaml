@@ -1,0 +1,76 @@
+# Production configuration for CLIProxyAPI on Render
+host: "0.0.0.0"
+port: 10000
+
+# TLS settings
+tls:
+  enable: false
+  cert: ""
+  key: ""
+
+# Management API settings - ENABLED for Web UI
+remote-management:
+  # Allow remote access to management panel
+  allow-remote: true
+
+  # Management secret key - CHANGE THIS!
+  # This will be hashed on startup
+  secret-key: "your-strong-secret-key-change-me"
+
+  # Enable the bundled management control panel
+  disable-control-panel: false
+
+  # GitHub repository for the management control panel
+  panel-github-repository: "https://github.com/router-for-me/Cli-Proxy-API-Management-Center"
+
+# Authentication directory
+auth-dir: "/root/.cli-proxy-api"
+
+# API keys for authentication - UPDATE THESE!
+api-keys:
+  - "sk-cliproxy-production-key-1"
+  - "sk-cliproxy-production-key-2"
+  - "sk-cliproxy-production-key-3"
+
+# Enable debug logging
+debug: true
+
+# Commercial mode - reduce memory usage
+commercial-mode: false
+
+# Logging
+logging-to-file: false
+logs-max-total-size-mb: 100
+
+# Usage statistics
+usage-statistics-enabled: true
+
+# Proxy URL (if needed)
+proxy-url: ""
+
+# Force model prefix
+force-model-prefix: false
+
+# Request retry settings
+request-retry: 3
+max-retry-interval: 30
+
+# Quota exceeded behavior
+quota-exceeded:
+  switch-project: true
+  switch-preview-model: true
+
+# Routing strategy
+routing:
+  strategy: "round-robin"
+
+# WebSocket authentication
+ws-auth: false
+
+# Keep-alive settings
+nonstream-keepalive-interval: 0
+
+# Streaming settings
+streaming:
+  keepalive-seconds: 15
+  bootstrap-retries: 1
